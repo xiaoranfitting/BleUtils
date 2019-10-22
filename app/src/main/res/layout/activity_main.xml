@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/mScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:text="搜索蓝牙"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="我选择的蓝牙设备："/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/deviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="设备名 :"/>
+
+            <TextView
+                android:id="@+id/deviceAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="设备地址："/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/mConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:text="连接蓝牙"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/disconnectBle"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="断开蓝牙"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/mState"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_horizontal"
+        android:text="连接状态"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/mOrder"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:text="获取最后一条指令"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/autoCheck"
+            android:textColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:text="自动测试"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/uih"
+            android:visibility="gone"
+            android:textColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:text="UIH"/>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/mData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="收到数据:"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecycler"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+
+</LinearLayout>
